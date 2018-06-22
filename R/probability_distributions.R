@@ -42,9 +42,9 @@ uniform_distribution <- R6Class (
       
     },
     
-    tf_distrib = function (parameters) {
-      tf$contrib$distributions$Normal(low = parameters$min,
-                                      high = parameters$max)
+    tf_distrib = function (parameters, dag) {
+      tf$contrib$distributions$Uniform(low = parameters$min,
+                                       high = parameters$max)
     }
     
   )
